@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 
-$packageName= 'sshfs-win'
+$packageName= 'sshfs'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 #$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
 
