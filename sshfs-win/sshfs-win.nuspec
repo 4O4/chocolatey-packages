@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
+<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <!-- This section is about this package, although id and version have ties back to the software -->
+    <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
+    <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
+    <id>sshfs-win</id>
+    <!-- version should MATCH as closely as possible with the underlying software -->
+    <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
+    <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
+    <version>2.7.17334</version>
+    <!--PackageSourceUrl - Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed-->
+    <packageSourceUrl>https://github.com/4O4/chocolatey-packages/sshfs-win</packageSourceUrl>
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>404</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>sshfs-win (Install)</title>
+    <authors>Bill Zissimopoulos</authors>
+    <!-- projectUrl is required for the community feed -->
+    <projectUrl>https://github.com/billziss-gh/sshfs-win</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/sshfs-win.png</iconUrl>-->
+    <copyright>Copyright (C) 2018 Bill Zissimopoulos</copyright>
+    <!-- If there is a license Url available, it is is required for the community feed -->
+     <licenseUrl>https://github.com/billziss-gh/sshfs-win/blob/master/License.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://github.com/billziss-gh/sshfs-win</projectSourceUrl>
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>http://github.com/billziss-gh/sshfs-win/issues</bugTrackerUrl>
+    <tags>sshfs-win sshfs-windows win-sshfs sshfs ssh cygfuse fuse winfsp filesystem dokan admin</tags>
+    <summary>SSHFS For Windows</summary>
+    <description><![CDATA[SSHFS-Win is a minimal port of [SSHFS](https://github.com/libfuse/sshfs) to Windows. Under the hood it uses [Cygwin](https://cygwin.com) for the POSIX environment and [WinFsp](https://github.com/billziss-gh/winfsp) for the FUSE functionality.
+
+## How to use
+
+Once you have installed WinFsp and SSHFS-Win you can start an SSHFS session to a remote computer using the following syntax:
+
+    \\sshfs\[locuser=]user@host[!port][\path]
+
+For example, you can map a network drive to billz@linux-host by using the syntax:
+
+    \\sshfs\billz@linux-host
+
+As a more complicated example, you can map a network drive to billz@linux-host at port 9999, but give access rights to the local user billziss by using the syntax:
+
+    \\sshfs\billziss=billz@linux-host!9999
+
+It is also possible to map the remote root directory by starting the `path` with a double backslash as in the following example:
+
+    \\sshfs\billz@linux-host\\home\billz
+
+You can also mount the remote's root `/` directory using the following format:
+
+    \\sshfs\user@host\..\..
+
+You can use the Windows Explorer "Map Network Drive" functionality or you can use the `net use` command from the command line.
+
+## GUI front end
+
+[SiriKali](https://mhogomchungu.github.io/sirikali/) is a GUI front end for SSHFS-Win (and other file systems). Please report problems with SiriKali in its [issues](https://github.com/mhogomchungu/sirikali/issues) page.
+]]></description>
+    <releaseNotes>https://github.com/billziss-gh/sshfs-win/releases/tag/v2.7.17334</releaseNotes>
+    <!-- =============================== -->      
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <dependencies>
+      <dependency id="winfsp" version="1.3.18160" />
+    </dependencies>
+    <!-- chocolatey-uninstall.extension - If supporting 0.9.9.x (or below) and including a chocolateyUninstall.ps1 file to uninstall an EXE/MSI, you probably want to include chocolatey-uninstall.extension as a dependency. Please verify whether you are using a helper function from that package. -->
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
