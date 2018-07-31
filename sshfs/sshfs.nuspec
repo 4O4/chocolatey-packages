@@ -14,14 +14,14 @@
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>2.7.17334</version>
     <!--PackageSourceUrl - Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed-->
-    <packageSourceUrl>https://github.com/4O4/chocolatey-packages/sshfs-win</packageSourceUrl>
+    <packageSourceUrl>https://github.com/4O4/chocolatey-packages/tree/master/sshfs</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>404</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>SSHFS-Win (Install)</title>
+    <title>SSHFS-Win</title>
     <authors>Bill Zissimopoulos</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://github.com/billziss-gh/sshfs-win</projectUrl>
@@ -65,6 +65,8 @@ You can use the Windows Explorer "Map Network Drive" functionality or you can us
 ## GUI front end
 
 [SiriKali](https://mhogomchungu.github.io/sirikali/) is a GUI front end for SSHFS-Win (and other file systems). Please report problems with SiriKali in its [issues](https://github.com/mhogomchungu/sirikali/issues) page.
+
+
 ]]></description>
     <releaseNotes>https://github.com/billziss-gh/sshfs-win/releases/tag/v2.7.17334</releaseNotes>
     <!-- =============================== -->      

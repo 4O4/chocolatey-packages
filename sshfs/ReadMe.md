@@ -27,3 +27,5 @@ You can use the Windows Explorer "Map Network Drive" functionality or you can us
 ## GUI front end
 
 [SiriKali](https://mhogomchungu.github.io/sirikali/) is a GUI front end for SSHFS-Win (and other file systems). Please report problems with SiriKali in its [issues](https://github.com/mhogomchungu/sirikali/issues) page.
+
+
