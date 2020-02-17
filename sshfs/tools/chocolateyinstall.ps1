@@ -11,9 +11,9 @@ $packageArgs = @{
   file           = Get-Item $toolsDir\*-x86.msi
   file64         = Get-Item $toolsDir\*-x64.msi
   softwareName  = 'SSHFS-Win*'
-  checksum      = '77A201B1623A34AFF40F7C26D916CA761BDA23C7E54557E6769BD9F9C0062D25'
+  checksum      = 'C8A6E5924F169C00E0AC55C859C5B52CFDA44F3459C426C5EC5861A914D42A5D'
   checksumType  = 'sha256'
-  checksum64    = '246B7CAA8C9B66C44AFF7629DA0A6767D405A5D78B7B81F429A5141C124DA1E1'
+  checksum64    = 'B3468016C3DDFC3F3B82F259674A1A9F3A5FAEF56AB4BD9620C58B97608F4FDC'
   checksumType64= 'sha256'
 
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
